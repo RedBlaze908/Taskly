@@ -13,6 +13,9 @@ int main() {
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_DockingEnable;
 
+    sf::RectangleShape shape(sf::Vector2f(100.f, 100.f));
+    shape.setFillColor(sf::Color(255, 127, 80));
+
     sf::Clock deltaClock;
 
     while (window.isOpen()) {
@@ -33,6 +36,7 @@ int main() {
 
         window.clear();
         ImGui::SFML::Render(window);
+        window.draw(shape);
         window.display();
     }
 
