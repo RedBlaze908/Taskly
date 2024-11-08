@@ -2,6 +2,8 @@
 #include "imgui-SFML.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <memory>
 
 class Taskly {
@@ -17,5 +19,5 @@ public:
 	Taskly() {}
 	~Taskly() {}
 
-	void Start();
+	void Start(); 
 };
